@@ -19,16 +19,17 @@ function ListRender() {
   };
 
   return (
-    <div>
+    <div className="card">
+      <h3>List Render</h3>
       <ul>
         {list.map((item) => (
           <li key={item.id}>{item.name}</li>
         ))}
       </ul>
       {list.length > 0 ? (
-        <button type="button" onClick={deleteRandomUser}>Delete random user</button>
+        <button className="btn" type="button" onClick={deleteRandomUser}>Delete random user</button>
       ) : (
-        <button type="button" onClick={() => setList(arr)}>Reset list</button>
+        <button className="btn" type="button" onClick={() => setList(arr)}>Reset list</button>
       )}
     </div>
 

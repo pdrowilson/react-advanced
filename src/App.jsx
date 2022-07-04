@@ -6,9 +6,9 @@ import ConditionalRender from './components/ConditionalRender';
 
 function App() {
   return (
-    <div>
-      <div><h1>React Playground</h1></div>
-      <img src={doggy} alt="" />
+    <div className="main">
+      <h1>React Playground</h1>
+      <img src={doggy} alt="Man's best friend" />
       <Counter />
       <ListRender />
       <ConditionalRender />
