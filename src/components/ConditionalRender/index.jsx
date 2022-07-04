@@ -1,11 +1,11 @@
 import React, { useState } from 'react';
 import '../../App.css';
 
-function ConditionalRender() {
+function ConditionalRender({ title }) {
   const [x, setX] = useState();
   return (
     <div className="card">
-      <h3>Conditional Rendering</h3>
+      <h3>{title}</h3>
       <span>I&apos;m a...</span>
       {!x && <p>Jedi Master</p>}
       {x && <p>Sith Lord</p>}

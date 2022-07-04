@@ -11,9 +11,9 @@ function App() {
       <div className="img-card">
         <img src={doggy} alt="Man's best friend" />
       </div>
-      <Counter />
-      <ListRender />
-      <ConditionalRender />
+      <Counter title="Counter" />
+      <ListRender title="List Render" />
+      <ConditionalRender title="Conditional Rendering" />
     </div>
   );
 }

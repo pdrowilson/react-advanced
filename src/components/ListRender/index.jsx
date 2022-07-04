@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 
-function ListRender() {
+function ListRender({ title }) {
   const arr = [
     { id: 1, name: 'Pedro', age: 29 },
     { id: 2, name: 'Cynthia', age: 34 },
@@ -20,7 +20,7 @@ function ListRender() {
 
   return (
     <div className="card">
-      <h3>List Render</h3>
+      <h3>{title}</h3>
       <ul>
         {list.map((item) => (
           <li key={item.id}>{item.name}</li>
