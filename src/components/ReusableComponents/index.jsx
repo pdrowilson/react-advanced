@@ -11,7 +11,7 @@ function ReusableComponents({ title }) {
     <div className="card">
       <h3>{title}</h3>
       {pokemons.map((pokemon) => (
-        <Pokemon name={pokemon.name} type={pokemon.type} />
+        <Pokemon key={pokemon.name} name={pokemon.name} type={pokemon.type} />
       ))}
     </div>
   );
