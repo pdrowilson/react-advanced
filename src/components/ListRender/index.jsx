@@ -12,8 +12,9 @@ function ListRender() {
     const randomNumber = Math.ceil(Math.random() * 3);
     console.log('random number', randomNumber);
     setList((previous) => {
-      console.log(previous);
-      return previous.filter((e) => e.id !== randomNumber);
+      console.log('previous lenght', previous.length);
+      if (previous.length > 1) return previous.filter((e) => e.id !== randomNumber);
+      return previous.filter((e) => e === 0);
     });
   };
 
