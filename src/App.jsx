@@ -1,15 +1,17 @@
-import './App.css'
+import './App.css';
 import doggy from './assets/dog.jpg';
-import ManageData from './components/ManageData';
+import ListRender from './components/ListRender';
+import Counter from './components/Counter';
 
 function App() {
   return (
     <div>
-      <h1>React Advanced</h1>
+      <div><h1>React Playground</h1></div>
       <img src={doggy} alt="" />
-      <ManageData />
+      <Counter />
+      <ListRender />
     </div>
-  )
+  );
 }
 
-export default App
+export default App;
