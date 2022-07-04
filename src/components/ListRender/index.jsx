@@ -1,17 +1,36 @@
 import React, { useState } from 'react';
 
 function ListRender() {
-  const arr = ['pedro', 'lucas', 'cynthia'];
-  // eslint-disable-next-line no-unused-vars
-  const [list, _setList] = useState(arr);
+  const arr = [
+    { id: 1, name: 'Pedro', age: 29 },
+    { id: 2, name: 'Cynthia', age: 34 },
+    { id: 3, name: 'Lucas', age: 9 },
+  ];
+  const [list, setList] = useState(arr);
+
+  const deleteRandomUser = () => {
+    const randomNumber = Math.ceil(Math.random() * 3);
+    console.log('random number', randomNumber);
+    setList((previous) => {
+      console.log(previous);
+      return previous.filter((e) => e.id !== randomNumber);
+    });
+  };
+
   return (
     <div>
       <ul>
-        {list.map((e) => (
-          <li key={e}>{e}</li>
+        {list.map((item) => (
+          <li key={item.id}>{item.name}</li>
         ))}
       </ul>
+      {list.length > 0 ? (
+        <button type="button" onClick={deleteRandomUser}>Delete random user</button>
+      ) : (
+        <button type="button" onClick={() => setList(arr)}>Reset list</button>
+      )}
     </div>
+
   );
 }
 
