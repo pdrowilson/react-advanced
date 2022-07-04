@@ -8,7 +8,9 @@ function App() {
   return (
     <div className="main">
       <h1>React Playground</h1>
-      <img src={doggy} alt="Man's best friend" />
+      <div className="img-card">
+        <img src={doggy} alt="Man's best friend" />
+      </div>
       <Counter />
       <ListRender />
       <ConditionalRender />
