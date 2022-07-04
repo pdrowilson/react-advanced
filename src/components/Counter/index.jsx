@@ -5,11 +5,18 @@ function Counter() {
 
   return (
     <div className="card">
-      <h3>List Render</h3>
+      <h3>Counter</h3>
       <button className="btn" type="button" onClick={() => setCount(count + 1)}>
         Counter:
         {count}
       </button>
+      <button className="btn" type="button" onClick={() => setCount(count + 1)}>
+        add 1
+      </button>
+      <button className="btn" type="button" onClick={() => count > 0 && setCount(count - 1)}>
+        subtract 1
+      </button>
+      <button className="btn" type="button" onClick={() => setCount(0)}>Reset</button>
     </div>
   );
 }
