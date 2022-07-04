@@ -4,6 +4,7 @@ import ListRender from './components/ListRender';
 import Counter from './components/Counter';
 import ConditionalRender from './components/ConditionalRender';
 import ReusableComponents from './components/ReusableComponents';
+import PropChildren from './components/PropChildren';
 
 function App() {
   return (
@@ -12,10 +13,13 @@ function App() {
       <div className="img-card">
         <img src={doggy} alt="Man's best friend" />
       </div>
-      <ReusableComponents title="Reusable Components" />
       <Counter title="Counter" />
       <ListRender title="List Render" />
       <ConditionalRender title="Conditional Rendering" />
+      <ReusableComponents title="Reusable Components" />
+      <PropChildren title="Prop Children Component">
+        <p>Hey... Im a children!</p>
+      </PropChildren>
     </div>
   );
 }
