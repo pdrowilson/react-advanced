@@ -127,6 +127,10 @@ img {
   will-change: box-shadow,transform;
   font-size: 18px;
 }
+.btn-dark {
+  background-color: #36395A;
+  color: #FCFCFD;
+}
 
 .btn:focus {
   box-shadow: #D6D6E7 0 0 0 1.5px inset, rgba(45, 35, 66, 0.4) 0 2px 4px, rgba(45, 35, 66, 0.3) 0 7px 13px -3px, #D6D6E7 0 -3px 0 inset;
@@ -139,5 +143,10 @@ img {
 
 .btn:active {
   box-shadow: #D6D6E7 0 3px 7px inset;
+  transform: translateY(2px);
+}
+
+.btn-dark:active {
+  box-shadow: #27293f 0 3px 7px inset;
   transform: translateY(2px);
 }
