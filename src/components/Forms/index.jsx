@@ -1,12 +1,15 @@
 import { useState } from 'react';
 
-function Forms({ title }) {
-  const [character, setCharacter] = useState('');
-  const [charClass, setCharClass] = useState('');
+function Forms({ title, user }) {
+  const [character, setCharacter] = useState(user ? user.name : '');
+  const [charClass, setCharClass] = useState(user ? user.charClass : '');
 
   const handleSubmit = (event) => {
-    event.prevent.default();
-    console.log('sending form...');
+    event.preventDefault();
+    console.log('character created successfully...', character, charClass);
+
+    setCharacter('');
+    setCharClass('');
   };
   return (
     <div className="card">
@@ -33,15 +36,17 @@ function Forms({ title }) {
           />
         </label>
         <label htmlFor="charClass">
-          Class:
-          <input
-            type="text"
+          <span>Class:</span>
+          <select
             name="charClass"
-            placeholder="Character Class"
             onChange={(e) => setCharClass(e.target.value)}
             value={charClass}
-          />
+          >
+            <option value="Warrior">Warrior</option>
+            <option value="Mage">Mage</option>
+          </select>
         </label>
+        <input className="btn" type="submit" value="create character" />
       </form>
     </div>
   );

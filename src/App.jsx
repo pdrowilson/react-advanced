@@ -29,7 +29,7 @@ function App() {
       <div className="img-card">
         <img src={doggy} alt="Man's best friend" />
       </div>
-      <Forms title="Forms" />
+      <Forms title="Forms" user={{ name: 'PWill', charClass: 'Warrior' }} />
       <StateLift title="State Lift" spell={spell} />
       <ChangeSpell title="(State Lift) - Change Spell" castSpell={castSpell} />
       <Counter title="Counter" />
