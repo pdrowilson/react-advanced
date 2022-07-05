@@ -158,3 +158,16 @@ img {
   box-shadow: #27293f 0 3px 7px inset;
   transform: translateY(2px);
 }
+
+form {
+  margin: 0 auto;
+  text-align: left;
+}
+
+input,
+textarea,
+select {
+  min-width: 100%;
+  display: block;
+  padding: .5rem;
+}

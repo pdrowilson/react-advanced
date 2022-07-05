@@ -9,6 +9,7 @@ import PropChildren from './components/PropChildren';
 import PropFunction from './components/PropFunction';
 import StateLift from './components/StateLift';
 import ChangeSpell from './components/StateLift/ChangeSpell';
+import Forms from './components/Forms';
 
 function App() {
   const [pokemonCaught, setPokemonCaught] = useState('');
@@ -28,6 +29,7 @@ function App() {
       <div className="img-card">
         <img src={doggy} alt="Man's best friend" />
       </div>
+      <Forms title="Forms" />
       <StateLift title="State Lift" spell={spell} />
       <ChangeSpell title="(State Lift) - Change Spell" castSpell={castSpell} />
       <Counter title="Counter" />
