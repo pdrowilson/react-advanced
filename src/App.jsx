@@ -12,10 +12,11 @@ import ChangeSpell from './components/StateLift/ChangeSpell';
 
 function App() {
   const [pokemonCaught, setPokemonCaught] = useState('');
+  const [spell, setSpell] = useState('');
+
   const catchPokemon = (pokemon) => {
     setPokemonCaught(pokemon);
   };
-  const [spell, setSpell] = useState('');
 
   const castSpell = (spellCasted) => {
     setSpell(spellCasted);
