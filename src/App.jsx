@@ -1,12 +1,18 @@
 import './App.css';
+import { useState } from 'react';
 import doggy from './assets/dog.jpg';
 import ListRender from './components/ListRender';
 import Counter from './components/Counter';
 import ConditionalRender from './components/ConditionalRender';
 import ReusableComponents from './components/ReusableComponents';
 import PropChildren from './components/PropChildren';
+import PropFunction from './components/PropFunction';
 
 function App() {
+  const [pokemonCaught, setPokemonCaught] = useState('');
+  const catchPokemon = (pokemon) => {
+    setPokemonCaught(pokemon);
+  };
   return (
     <div className="main">
       <h1>React Playground</h1>
@@ -20,6 +26,7 @@ function App() {
       <PropChildren title="Prop Children Component">
         <p>Hey... Im a children!</p>
       </PropChildren>
+      <PropFunction title="Function through props" catchPokemon={catchPokemon} pokemonCaught={pokemonCaught} />
     </div>
   );
 }
