@@ -80,11 +80,19 @@ img {
   background-color: #EDB506;
   width: 70%;
 }
+.mini-card {
+  border-radius: 10px;
+  padding: .9rem;
+  margin: .5rem 0;
+  background-color: #fcfcfd;
+  border: 1px solid #d5d9d9;
+  box-shadow: rgba(213, 217, 217, .5) 0 2px 5px 0;
+}
 .card {
   border-radius: 6px;
   padding: 2rem;
   margin: 1rem 0;
-  background-color: aliceblue;
+  background-color: #fcfcfd;
   width: 70%;
 }
 .card h3 {
